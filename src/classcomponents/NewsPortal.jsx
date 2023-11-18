@@ -45,11 +45,11 @@ class NewsPortal extends Component {
                         <Form.Control placeholder="Cari Berita Di sini" value={this.state.searchInput} onChange={(e) => this.setState({ searchInput: e.target.value })} />
                     </Col>
                 </Row>
-                <Row xs={1} md={3} className="g-4 mt-5">
+                <Row className="g-4" xs={1} md={3} className="g-4 mt-5">
                     {
                         this.state.newsData.map((data, index) => (
                             <Col key={index}>
-                                <Card style={{ height: "35rem"}}>
+                                <Card className="shadow-lg" style={{ height: "35rem"}}>
                                     <Card.Img variant="top" src={data.urlToImage}/>
                                     <Card.Body>
                                         <Card.Title>
