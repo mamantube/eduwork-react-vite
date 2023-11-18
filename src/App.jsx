@@ -1,5 +1,6 @@
-import News from "./components/News"
+// import News from "./components/News"
 import Header from "./components/Header"
+import NewsPortal from "./classcomponents/NewsPortal"
 
 function App() {
   
@@ -7,7 +8,8 @@ function App() {
   return (
     <div className="bg-info">
       <Header />
-      <News />
+      <NewsPortal />
+      {/* <News /> */}
     </div>
   )
 }
