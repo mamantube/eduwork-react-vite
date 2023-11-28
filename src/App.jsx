@@ -1,6 +1,6 @@
-// import News from "./components/News"
-import Header from "./components/Header"
-import NewsPortal from "./classcomponents/NewsPortal"
+import Header from "./components/Header";
+import NewsContainer from "./functionalcomponent/NewsContainer"
+// import NewsPortal from "./classcomponents/NewsPortal"
 
 function App() {
   
@@ -8,8 +8,8 @@ function App() {
   return (
     <div className="bg-info">
       <Header />
-      <NewsPortal />
-      {/* <News /> */}
+      {/* <NewsPortal /> */}
+      <NewsContainer />
     </div>
   )
 }
