@@ -37,19 +37,38 @@ const NewsContainer = () => {
                     <Form.Control 
                         placeholder="Cari Berita Di Sini" 
                         value={searchInput}
-                        onChange={(e) => ({setSearchInput: e.terget.value })} />
+                        onChange={(e) => setSearchInput(e.target.value)} />
                 </Col>
             </Row>
             <Row className="g-4 xs={1} md={3} mt-5 ">
-                {
-                    newsData.map((data, index) => (
-                        <Col key={index}>
-                            <Card className="shadow-lg" style={{ height: "35rem" }}>
-                                <Card.Img variant="top" src={data.urlToImage} />
-                            </Card>
-                        </Col>
-                    ))
-                }
+               {
+                newsData.map((data, index) => (
+                    <Col key={index}>
+                        <Card className="shadow-lg" style={{ height: "35rem" }}>
+                            <Card.Img variant="top" src={data.urlToImage} />
+                            <Card.Body>
+                                <Card.Title>
+                                    {data.title}
+                                </Card.Title>
+                                <Card.Text>
+                                    {data.description}
+                                </Card.Text>
+                            </Card.Body>
+                            <Card.Footer>
+                                <span>
+                                    {data.author} <br />
+                                    {data.publishedAt} <br />
+                                </span>
+                                <a href={data.url}>
+                                    <Button className="mt-3 mb-3" variant="primary">
+                                        Baca Selengkapnya >>
+                                    </Button>
+                                </a>
+                            </Card.Footer>
+                        </Card>
+                    </Col>
+                ))
+               }
             </Row>
         </Container>
     )
