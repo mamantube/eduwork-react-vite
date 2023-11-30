@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { Container, Row, Col, Form, Button, Card } from "react-bootstrap";
 import axios from "axios";
+import "./NewsContainer.css"
 
 const NewsContainer = () => {
     const [newsData, setNewsData] = useState([]);
@@ -15,7 +16,7 @@ const NewsContainer = () => {
         axios.get(link)
             .then((response) => {
                 let {data} = response;
-                if (data.articles && data.articles.lenght > 0) {
+                if (data.articles && data.articles.length > 0) {
                     setNewsData(data.articles);
                 } else {
                     setNewsData([])
@@ -45,16 +46,18 @@ const NewsContainer = () => {
     return (
         <Container fluid>
             <Row>
-                <Col>
+                <Col classname="input-search" md={{ span: 6, offset: 3 }}>
                     <Form.Control 
                         placeholder="Cari Berita Di Sini" 
                         value={searchInput}
                         onChange={(e) => setSearchInput(e.target.value)} />
                 </Col>
             </Row>
-            <Row className="g-4 xs={1} md={3} mt-5 ">
+            <Row className="g-4 mt-5" xs={1} md={3}>
                 {loading ? (
-                    <Col>Loading....</Col>
+                    <Col md={{ span: 6, offset: 5 }}>
+                       <div className="loader"></div>
+                    </Col>
                 ) : (
                     newsData.map((data, index) => (
                         <Col key={index}>
