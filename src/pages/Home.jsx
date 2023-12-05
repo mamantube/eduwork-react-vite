@@ -10,7 +10,7 @@ import gmailLogo from "../assets/img/gmail-logo.png";
 
 const Home = () => {
     return (
-        <Fade className="d-flex">
+        <Fade duration={2500} className="d-flex">
             <Container fluid style={{ marginTop: "10%"}}>
                 <Row>
                     <Col className="text-white">
