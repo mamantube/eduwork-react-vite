@@ -18,18 +18,22 @@ const Home = () => {
                         <h1>I'm Muhammad Firman Hidayat</h1>
                         <h3>(MamanTube)</h3>
                         <p>A passionate individual who always thrives to work on end to end products which develop sustainable and scalable social and technical systems to create impact.</p>
-                        <div className="border border-3 border-dark rounded-pill" style={{ marginRight: "31%"}}>
-                            <div className="ps-2 pt-2 pb-2 bg-white rounded-pill">
-                                <a href="https://github.com/mamantube" target="_blank"><img src={githubLogo} style={{ height: "60px"}} alt="" /></a>
-                                <a href="https://www.youtube.com/channel/UCaKHLfNcnPTpXi19IbU-IRQ" target="_blank" target="_blank"><img src={youtubeLogo} style={{ height: "60px", marginLeft: "10px"}} alt="" /></a>
-                                <a href="https://www.linkedin.com/in/muhammad-firman-hidayat-7a5293209/" target="_blank" target="_blank"><img src={linkedinLogo} style={{ height: "60px", marginLeft: "10px"}} alt="" /></a>
-                                <a href="https://www.instagram.com/firman_dy07/" target="_blank" target="_blank"><img src={instagramLogo} style={{ height: "60px", marginLeft: "10px"}} alt="" /></a>
-                                <a href="https://www.facebook.com/m.hidayat.18" target="_blank" target="_blank"><img src={facebookLogo} style={{ height: "60px", marginLeft: "10px"}} alt="" /></a>
-                                <a href="mailto:firmanhiday.id007@gmail.com" target="_blank" target="_blank"><img src={gmailLogo} style={{ height: "50px", marginLeft: "10px"}} alt="" /></a>
-                            </div>
-                        </div>
+                        <Row>
+                            <Col>
+                                <div className="border border-3 border-dark rounded-pill" style={{ marginRight: "41%"}}>
+                                    <div className="ps-2 pt-2 pb-2 bg-white rounded-pill">
+                                        <a href="https://github.com/mamantube" target="_blank"><img src={githubLogo} style={{ height: "50px"}} alt="" /></a>
+                                        <a href="https://www.youtube.com/channel/UCaKHLfNcnPTpXi19IbU-IRQ" target="_blank" target="_blank"><img src={youtubeLogo} style={{ height: "50px", marginLeft: "10px"}} alt="" /></a>
+                                        <a href="https://www.linkedin.com/in/muhammad-firman-hidayat-7a5293209/" target="_blank" target="_blank"><img src={linkedinLogo} style={{ height: "50px", marginLeft: "10px"}} alt="" /></a>
+                                        <a href="https://www.instagram.com/firman_dy07/" target="_blank" target="_blank"><img src={instagramLogo} style={{ height: "50px", marginLeft: "10px"}} alt="" /></a>
+                                        <a href="https://www.facebook.com/m.hidayat.18" target="_blank" target="_blank"><img src={facebookLogo} style={{ height: "50px", marginLeft: "10px"}} alt="" /></a>
+                                        <a href="mailto:firmanhiday.id007@gmail.com" target="_blank" target="_blank"><img src={gmailLogo} style={{ height: "40px", marginLeft: "10px"}} alt="" /></a>
+                                    </div>
+                                </div>
+                            </Col>
+                        </Row>
                     </Col>
-                    <Col calssName="text-white">
+                    <Col className="text-white">
                         <img src={programmer} style={{ height: "450px"}} alt="" />
                     </Col>
                 </Row>
